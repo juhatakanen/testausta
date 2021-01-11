@@ -25,6 +25,7 @@ h1 {
   background-position: center;
   position: fixed;
   z-index: -1;
+  padding: env(safe-area-inset);
 }
 .osio {
   height: 100vh;
