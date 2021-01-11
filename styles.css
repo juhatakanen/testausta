@@ -2,18 +2,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  position: relative;
   overflow-x: hidden;
   background-color: black;
-}
-
-h1 {
-  margin: 0;
-}
-
-.container {
-  margin: 0;
-  padding: 0;
+  position: relative;
 }
 
 .background {
@@ -26,11 +17,44 @@ h1 {
   background-position: center;
   position: fixed;
   z-index: -1;
-  padding: env(
+  /* padding: env(
     safe-area-inset
-  ); // Meant to prevent whitespace appearing on iOS Chrome when rotating
+  ); // Meant to prevent whitespace appearing on iOS Chrome when rotating */
 }
+
+.logoDiv {
+  display: inline;
+  height: auto;
+  width: 40%;
+  /* background-color: rgba(255, 0, 0, 0.479); */
+  position: fixed;
+  top: 60vh;
+  left: 30%;
+  transition: all 2s;
+}
+.logoPng {
+  width: 100%;
+  /* left: 25%; */
+}
+
+.logoDiv.active {
+  top: 0;
+  left: 30px;
+  width: 10%;
+  position: fixed;
+  /* position: sticky ; */
+}
+
 .osio {
+  top: 200vh;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sisaosio {
+  height: 70vh;
+  width: 70vw;
+  background: red;
 }
