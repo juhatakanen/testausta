@@ -4,7 +4,7 @@ body {
   padding: 0;
   position: relative;
   overflow-x: hidden;
-  background-color
+  background-color: black;
 }
 
 h1 {
@@ -14,7 +14,6 @@ h1 {
 .container {
   margin: 0;
   padding: 0;
-  background-color: black;
 }
 
 .background {
@@ -27,7 +26,9 @@ h1 {
   background-position: center;
   position: fixed;
   z-index: -1;
-  padding: env(safe-area-inset); // Meant to prevent whitespace appearing on iOS Chrome when rotating
+  padding: env(
+    safe-area-inset
+  ); // Meant to prevent whitespace appearing on iOS Chrome when rotating
 }
 .osio {
   height: 100vh;
