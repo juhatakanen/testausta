@@ -2,6 +2,16 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
 }
 
 .background {
@@ -12,6 +22,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: fixed;
+  z-index: -1;
 }
 .osio {
   height: 100vh;
