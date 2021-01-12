@@ -1,5 +1,7 @@
 * {
-  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: rgb(157 138 137);
 }
 
 body {
@@ -7,11 +9,16 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+h1 {
+  font-size: 150%;
+  text-decoration: underline;
 }
 .container {
   width: 100%;
@@ -24,22 +31,41 @@ body {
 
 .navbar {
   width: 100%;
+  max-width: 1500px;
   height: 50px;
   position: fixed;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+}
+
+.navbar-div {
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(41, 41, 41, 0.562);
-  opacity: 0;
-  transition: all 1s;
-}
-.navbar.visible {
-  opacity: 1;
+  background-color: rgb(15, 15, 15);
 }
 
-.navbarItem {
-  font-size: 35px;
+.navbar-left {
+  padding-right: 15%;
 }
+.navbar-center {
+  justify-content: center;
+}
+.navbar-right {
+  padding-left: 15%;
+}
+.navbar-link {
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.logoNavbar {
+  height: 100%;
+  width: 100%;
+}
+
 .background {
   height: 100vh;
   width: 100vw;
@@ -55,29 +81,6 @@ body {
     safe-area-inset
   ); // Meant to prevent whitespace appearing on iOS Chrome when rotating */
 }
-
-.logoDiv {
-  display: block;
-  height: auto;
-  width: 40%;
-  /* background-color: rgba(255, 0, 0, 0.479); */
-  position: sticky;
-  top: 73%;
-  /* left: 0; */
-  transition: all 1s;
-}
-
-.logoDiv.active {
-  top: 0;
-  left: 100px;
-  width: 10%;
-}
-
-.logoPng {
-  width: 100%;
-  /* left: 25%; */
-}
-
 .osio1 {
   height: 100vh;
   width: 100%;
@@ -86,32 +89,20 @@ body {
   align-items: center; */
 }
 .osio2 {
-  height: 400px;
+  height: 800px;
   width: 100%;
   max-width: 1500px;
-  background: rgba(255, 0, 0, 0.356);
+  background: rgba(15, 15, 15, 0.801);
+  text-align: center;
+  padding-top: 25px;
+
   /* display: flex;
   justify-content: center;
   align-items: center; */
 }
 
-@media (max-width: 1300px) {
-  .logoDiv.active {
-    width: 15%;
-  }
-@media (max-width: 1000px) {
-  .logoDiv {
-    width: 60%;
-  }
-  .logoDiv.active {
-    width: 18%;
-  }
-}
-@media (max-width: 600px) {
-  .logoDiv {
-    width: 80%;
-  }
-  .logoDiv.active {
-    width: 30%;
+@media (max-width: 850px) {
+  .navbar-div {
+    display: none;
   }
 }
